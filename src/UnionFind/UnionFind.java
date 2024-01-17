@@ -31,6 +31,8 @@ public abstract class UnionFind {
         this.count = count;
     }
 
+    public void setIndex(int i, int j){index[i] = j;}
+
     public abstract int find(int p);
 
     public abstract void union(int p, int q);

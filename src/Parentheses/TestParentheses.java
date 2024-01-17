@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 public class TestParentheses {
     public static void main(String[] args) throws Exception {
         /*** Test Stack ***/
-        // Create a BufferedReader to read from the input stream
+        // Create a BUnionFindferedReader to read from the input stream
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter something: ");
         // Read a line of input from the user

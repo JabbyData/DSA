@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"UnionFind","l":"QuickFind"},{"p":"UnionFind","l":"QuickUnion"},{"p":"qunionFind","l":"TestUnionFind"},{"p":"UnionFind","l":"UnionFind"},{"p":"UnionFind","l":"WeightedQuickUnion"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Trees","l":"BinaryNode"},{"p":"Trees","l":"BinaryTree"}];updateSearchResults();

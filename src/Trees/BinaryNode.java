@@ -1,9 +1,9 @@
 package Trees;
 
 public class BinaryNode {
-    private int value;
-    private BinaryNode leftSon;
-    private BinaryNode rightSon;
+    protected int value;
+    protected BinaryNode leftSon;
+    protected BinaryNode rightSon;
 
     public BinaryNode(int value, BinaryNode leftSon, BinaryNode rightSon) {
         this.value = value;
@@ -73,6 +73,27 @@ public class BinaryNode {
             rightSon.postOrderTraversal();
         }
         System.out.print(value + "->");
+    }
+
+    public int height(){
+        if (leftSon == null && rightSon == null){
+            return 1;
+        }
+        else{
+            int hl = 0; int hr = 0;
+            if (leftSon != null){
+                hl = leftSon.height();
+            }
+            if (rightSon != null){
+                hr = rightSon.height();
+            }
+            if (hl > hr){
+                return 1+hl;
+            }
+            else{
+                return 1+hr;
+            }
+        }
     }
 }
 

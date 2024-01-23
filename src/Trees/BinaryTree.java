@@ -3,6 +3,7 @@ package Trees;
 public class BinaryTree {
     private BinaryNode root;
 
+    /* constructor */
     public BinaryTree(BinaryNode root){
         this.root = root;
     }
@@ -10,7 +11,7 @@ public class BinaryTree {
     /**
      * Insert elt x in the tree
      * @param x
-     * @TimeComplexity O(log2(n)), where n is the number of nodes in the tree
+     * @TimeComplexity O(n), where n is the number of nodes in the tree (worst case if the tree is skewed)
      * @MemoryComplexity O(1)
      */
     public void insert(int x){
@@ -71,5 +72,12 @@ public class BinaryTree {
         else{
             root.postOrderTraversal();
         }
+    }
+
+    public int height(){
+        if (root == null){
+            return 0;
+        }
+        else{ return root.height();}
     }
 }

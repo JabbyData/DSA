@@ -23,7 +23,7 @@ class Node{
 public class CastleOnTheGrid {
     public static int minimumMoves(List<String> grid, int startX, int startY, int goalX, int goalY){
             int dimX = grid.size();
-            int dimY = grid.getFirst().length();
+            int dimY = grid.get(0).length();
             ArrayDeque<Node> moves = new ArrayDeque<>();
             Hashtable<int[],Boolean> visited = new Hashtable<>();
             int[] start = new int[]{startX,startY};

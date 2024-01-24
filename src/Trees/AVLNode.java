@@ -62,13 +62,13 @@ public class AVLNode {
         return y;
     }
 
-    public void insert(int x){
+    public AVLNode insert(int x){
         /* classic insertion in binary tree */
         if (x <= value) {
             if (leftSon == null) {
                 leftSon = new AVLNode(x, 1, null, null);
             } else {
-                leftSon.insert(x);
+                leftSon = leftSon.insert(x);
             }
         }
         else {
@@ -76,7 +76,7 @@ public class AVLNode {
             if (rightSon == null) {
                 rightSon = new AVLNode(x, 1, null, null);
             } else {
-                rightSon.insert(x);
+                rightSon = rightSon.insert(x);
             }
         }
 
@@ -95,25 +95,41 @@ public class AVLNode {
             height = 1 + hr;
         }
 
-        /* get the balanced ratio
+        /* get the balanced ratio */
         int ublRatio = UnbalancedRatio();
 
-        /* if unbalanced, need to re balance the tree
+        /* if unbalanced, need to re balance the tree */
         if (ublRatio < -1 && x <= leftSon.value){
             // left left case
+            return this.rightRotate();
 
         }
 
-        if (ublRatio < -1 && x > rightSon.value){
+        if (ublRatio < -1 && x > leftSon.value){
             // left right case
-
+            leftSon = leftSon.leftRotate();
+            return this.rightRotate();
         }
 
         if (ublRatio > 1 && x > rightSon.value){
             // right right case
+            return this.leftRotate();
+        }
 
-        }*/
+        if (ublRatio > 1 && x <= rightSon.value){
+            // right left case
+            rightSon = rightSon.rightRotate();
+            return this.leftRotate();
+        }
+        return this;
+        }
 
 
+        public void preOrderTraversal(){
+            if (this != null) {
+                System.out.print(value + "->");
+                if (leftSon != null){leftSon.preOrderTraversal();}
+                if (rightSon != null){rightSon.preOrderTraversal();}
+            }
         }
     }

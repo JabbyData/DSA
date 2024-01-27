@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Trees","l":"BinaryNode"},{"p":"Trees","l":"BinaryTree"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Trees","l":"AVLNode"},{"p":"Trees","l":"AVLTree"},{"p":"Trees","l":"BinaryNode"},{"p":"Trees","l":"BinaryTree"},{"p":"Trees","l":"BTree"},{"p":"Trees","l":"RedBlackTree"}];updateSearchResults();
